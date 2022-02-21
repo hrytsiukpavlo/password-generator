@@ -29,9 +29,9 @@
 
             <div class="form-group">
                 <label id="name-label" for="password"></label>
-                <input type="text" name="password" id="password" class="form-control" placeholder="Your password will be here..." size="35" readonly>
+                <input type="text" name="password" id="password" class="form-control" placeholder="Your password will be here..." size="35" onclick="this.select();handleCopyClick();handleWarningMessage()" readonly>
                 <button type="button" value="Copy" onclick="handleCopyClick();handleWarningMessage()">Copy</button>
-                <button type="button" value="Generate" onclick="handleCopyClick()">Generate</button>
+                <button type="button" value="Generate" onclick="hanleGenerateClick(this)">Generate</button>
             </div>
 
             <div class="warning-message">
