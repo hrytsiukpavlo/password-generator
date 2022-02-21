@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+        <form id="generator-form">
+
+            <div class="form-group">
+                <p>Choose the length of the password:</p>
+                <label>
+                    <input name="password-length" value="small" type="radio" class="input-radio" id="small" onchange="handleRadioChange(this)">Small
+                </label>
+                <label>
+                    <input name="password-length" value="medium" type="radio" class="input-radio" id="medium" onchange="handleRadioChange(this)">Medium
+                </label>
+                <label>
+                    <input name="password-length" value="large" type="radio" class="input-radio" id="large" onchange="handleRadioChange(this)">Large
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label id="name-label" for="password"></label>
+                <input type="text" name="password" id="password" class="form-control" placeholder="Your password will be here..." size="35" readonly>
+                <button type="button" value="Copy" onclick="handleCopyClick();handleWarningMessage()">Copy</button>
+                <button type="button" value="Generate" onclick="handleCopyClick()">Generate</button>
+            </div>
+
+            <div class="warning-message">
+                <p id="warning-paragraph" class="none">Copied to the clipboard!</p>
+            </div>
+
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
