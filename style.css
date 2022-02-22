@@ -32,6 +32,11 @@ body {
 
 .form-group {
     margin: 5%;
+    text-align: center;
+}
+
+button {
+    margin: 5px;
 }
 
 .warning-message {
@@ -61,3 +66,45 @@ body {
 .none {
     display: none;
   }
+
+@media (max-width: 1150px) {
+    .container {
+        width: 60vw;
+        height: 25vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 80vw;
+        height: 30vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90vw;
+        height: 38vh;
+    }
+    .form-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        height: 50vh;
+    }
+    input[type="text"] {
+        width: 50vw;
+    }
+}
+
+@media (max-height: 610px) {
+    .container {
+        height: 45vh;
+    }
+}
