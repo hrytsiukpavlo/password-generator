@@ -38,8 +38,10 @@ function handleWarningMessage() {
         warning_paragraph.classList.add('show');
         warning_paragraph.classList.remove('none');
         copy_button.disabled = true;
+        password_field.disabled = true;
         setTimeout(() => {
             copy_button.disabled = false;
+            password_field.disabled = false;
             warning_paragraph.classList.add('none');
             warning_paragraph.classList.remove('show');
         }, 3000)
