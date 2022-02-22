@@ -17,7 +17,7 @@
             <div class="form-group">
                 <p>Choose the length of the password:</p>
                 <label>
-                    <input name="password-length" value="short" type="radio" class="input-radio" id="short" onchange="handleRadioChange(this)">Short
+                    <input name="password-length" value="short" type="radio" class="input-radio" id="short" onchange="handleRadioChange(this)" tabindex="1">Short
                 </label>
                 <label>
                     <input name="password-length" value="medium" type="radio" class="input-radio" id="medium" onchange="handleRadioChange(this)">Medium
@@ -29,9 +29,9 @@
 
             <div class="form-group">
                 <label id="name-label" for="password"></label>
-                <input type="text" name="password" id="password" class="form-control" placeholder="Your password will be here..." size="35" onclick="this.select();handleCopyClick();handleWarningMessage()" readonly>
-                <button type="button" value="Copy" onclick="handleCopyClick();handleWarningMessage()" id="copy-button">Copy</button>
-                <button type="button" value="Generate" onclick="hanleGenerateClick(this)">Generate</button>
+                <input type="text" name="password" id="password" class="form-control" placeholder="Your password will be here..." size="35" onclick="this.select();handleCopyClick();handleWarningMessage()" tabindex="4" readonly>
+                <button type="button" value="Copy" onclick="handleCopyClick();handleWarningMessage()" id="copy-button" tabindex="2">Copy</button>
+                <button type="button" value="Generate" onclick="hanleGenerateClick(this)" tabindex="3">Generate</button>
             </div>
 
             <div class="warning-message">
