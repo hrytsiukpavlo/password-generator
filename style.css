@@ -36,7 +36,11 @@ body {
 }
 
 button {
-    margin: 5px;
+    margin: 20px 10px 10px; 
+    border-radius: 8px;
+    border: 0;
+    background-color: #d5fdfd;
+    font-family : inherit;
 }
 
 .warning-message {
