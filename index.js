@@ -2,6 +2,7 @@ const password_field = document.querySelector('#password');
 const warning_block = document.querySelector('.warning-message');
 const warning_paragraph = document.querySelector('#warning-paragraph');
 const radiobuttons = document.querySelectorAll('input[name="password-length"]');
+const copy_button = document.querySelector('#copy-button');
 
 function handleRadioChange(radiobutton) {
 
@@ -15,7 +16,7 @@ function handleRadioChange(radiobutton) {
         return result;
     }
 
-    if (radiobutton.value === 'small') {
+    if (radiobutton.value === 'short') {
         password_field.value = makeid(8);
     }
     if (radiobutton.value === 'medium') {
@@ -27,18 +28,20 @@ function handleRadioChange(radiobutton) {
 }
 
 function handleCopyClick() {
-    if (password_field.value.length > 1) {
+    if (password_field.value.length > 0) {
         navigator.clipboard.writeText(password_field.value);
     }
 }
 
 function handleWarningMessage() {
-    if (password_field.value.length > 1) {
+    if (password_field.value.length > 0) {
         warning_paragraph.classList.add('show');
         warning_paragraph.classList.remove('none');
+        copy_button.disabled = true;
         setTimeout(() => {
+            copy_button.disabled = false;
             warning_paragraph.classList.add('none');
-            warning_paragraph.classList.remove('show')
+            warning_paragraph.classList.remove('show');
         }, 3000)
     }
 }
@@ -62,7 +65,7 @@ function hanleGenerateClick() {
         return result;
     }
 
-    if (selectedSize === 'small') {
+    if (selectedSize === 'short') {
         password_field.value = makeid(8);
     }
     if (selectedSize === 'medium') {
