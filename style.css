@@ -84,7 +84,7 @@ button {
 @media (max-width: 600px) {
     .container {
         width: 90vw;
-        height: 38vh;
+        height: 40vh;
     }
     .form-group {
         display: flex;
